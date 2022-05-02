@@ -22,28 +22,33 @@
         .font-size-16 {
             font-size: 16px;
         }
+
+        .my-style-selector select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-width: 2px;
+            border-radius: 10em;
+            margin-right: 10px;
+            outline: none;
+            padding: .3em 1.25em;
+            text-align-last:center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container mt-4" style="max-width:720px">
         <h1>台灣 COVID-19 家用快篩查詢</h1>
-
-        <div id="card-block" class="mb-4">
-
+        <div class="d-flex mt-4">
+            <div role="tw-city-selector" class="my-style-selector" data-standard-words></div>
+            <button id="search" type="button" class="btn btn-dark btn-rounded me-2">查詢</button>
+            <button id="searchLocation" type="button" class="btn btn-dark btn-rounded">使用定位查詢</button>
         </div>
-        <!-- <div class="card shadow-custom mt-4">
-            <div class="card-body pb-3">
-                <div class="d-flex mb-1">
-                    <h4 class="card-title mb-0">屏東縣霧台鄉衛生所</h4>
-                    <span class="ms-2 small mt-auto">(08)7902232</span>
-                </div>
-                <p class="text-black-50 font-size-16 mb-2"><strong>屏東縣霧台鄉霧台村神山巷68號</strong></p>
-                <p class="mb-1 text-success">剩餘 122 組</p>
-                <p class="mb-0">下午一點到三點販售實名制快篩</p>
-            </div>
-            <div class="card-footer">2022/05/01 21:38:02</div>
-        </div>-->
+
+        <div id="card-block" class="mt-4">
+            <h5>載入中...</h5>
+        </div>
     </div>
 </body>
 
@@ -52,6 +57,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js"></script>
 
 <script type="text/javascript" src="./js/index.js"></script>
 

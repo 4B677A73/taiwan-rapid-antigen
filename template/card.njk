@@ -1,11 +1,17 @@
-<div class="card shadow-custom mt-4">
+<div class="card shadow-custom mb-4">
     <div class="card-body pb-3">
         <div class="d-flex mb-1">
             <h4 class="card-title mb-0">{{ name }}</h4>
             <span class="ms-2 small mt-auto">{{ phone }}</span>
         </div>
         <p class="text-black-50 font-size-16 mb-2"><strong>{{ address }}</strong></p>
+        {% if count < 10 %}
+        <p class="mb-1 text-danger">剩餘 {{ count }} 組</p>
+        {% elif count <= 30  %}
+        <p class="mb-1 text-warning">剩餘 {{ count }} 組</p>
+        {% else %}
         <p class="mb-1 text-success">剩餘 {{ count }} 組</p>
+        {% endif %}
         <p class="mb-0">{{ note }}</p>
     </div>
     <div class="card-footer">{{ updated }}</div>
