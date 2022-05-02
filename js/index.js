@@ -67,7 +67,7 @@ function generateCards(data, maxCount = -1) {
     let count = 0;
 
     data.some(function(each){
-        cards += nunjucks.render('/template/card.njk', each.properties);
+        cards += nunjucks.render('card.njk', each.properties);
 
         return maxCount != -1 ? ++count >= maxCount : false;
     });
