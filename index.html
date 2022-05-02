@@ -23,7 +23,7 @@
             font-size: 16px;
         }
 
-        .my-style-selector select {
+        .city-selector select {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -31,22 +31,24 @@
             border-radius: 10em;
             margin-right: 10px;
             outline: none;
-            padding: .3em 1.25em;
+            padding: 0.3em 1.25em;
             text-align-last:center;
+            color: black;
+            border-color: black;
         }
     </style>
 </head>
 
 <body>
-    <div class="container mt-4" style="max-width:720px">
+    <div class="container mt-4" style="max-width:720px;">
         <h1>台灣 COVID-19 家用快篩查詢</h1>
-        <div class="d-flex mt-4">
-            <div role="tw-city-selector" class="my-style-selector" data-standard-words></div>
-            <button id="search" type="button" class="btn btn-dark btn-rounded me-2">查詢</button>
-            <button id="searchLocation" type="button" class="btn btn-dark btn-rounded">使用定位查詢</button>
+        <div class="d-flex mt-4 overflow-auto pb-3">
+            <div role="tw-city-selector" class="city-selector d-flex" data-standard-words></div>
+            <button id="search" type="button" class="btn btn-dark btn-rounded me-2 text-nowrap">查詢</button>
+            <button id="searchLocation" type="button" class="btn btn-dark btn-rounded text-nowrap">使用定位查詢</button>
         </div>
 
-        <div id="card-block" class="mt-4">
+        <div id="card-block" class="mt-2">
             <h5>載入中...</h5>
         </div>
     </div>
